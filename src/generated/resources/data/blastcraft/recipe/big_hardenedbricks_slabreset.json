@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "blastcraft:hardenedbricksbig_slab"
+    },
+    {
+      "item": "blastcraft:hardenedbricksbig_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blastcraft:hardenedbricksbig"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "blastcraft:carbonplatedwallbig_stairs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blastcraft:carbonplatedwallbig"
+  }
+}

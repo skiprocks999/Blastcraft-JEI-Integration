@@ -31,11 +31,11 @@ public class BlastCompressorRecipeCategory extends Item2ItemRecipeCategory<Blast
 	public static final ArrowAnimatedObject ANIM_ARROW = new ArrowAnimatedObject(ProgressBars.PROGRESS_ARROW_RIGHT, 41, 23, StartDirection.LEFT);
 
 	public static final PowerLabelWrapperElectroRecipe POWER_LABEL = new PowerLabelWrapperElectroRecipe(2, 48, 240);
-	public static final BiproductPercentWrapperElectroRecipe BI_LABEL = new BiproductPercentWrapperElectroRecipe(100, 40, false);
+	public static final BiproductPercentWrapperElectroRecipe BI_LABEL = new BiproductPercentWrapperElectroRecipe(100, 40, BiproductPercentWrapperElectroRecipe.BiproductType.ITEM, 1);
 
 	public static final int ANIM_TIME = 50;
 
-	public static ItemStack INPUT_MACHINE = new ItemStack(BlastcraftBlocks.blockBlastCompressor);
+	public static ItemStack INPUT_MACHINE = new ItemStack(BlastcraftBlocks.BLOCK_BLASTCOMPRESSOR.get());
 
 	public static final RecipeType<BlastCompressorRecipe> RECIPE_TYPE = RecipeType.create(References.ID, BlastCompressorRecipe.RECIPE_GROUP, BlastCompressorRecipe.class);
 

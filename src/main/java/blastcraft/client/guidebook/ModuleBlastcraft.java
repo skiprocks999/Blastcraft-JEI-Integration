@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ModuleBlastcraft extends Module {
 
-	private static final ImageWrapperObject LOGO = new ImageWrapperObject(0, 0, 0, 0, 32, 32, 32, 32, new ResourceLocation(References.ID, "textures/screen/guidebook/blastcraftlogo.png"));
+	private static final ImageWrapperObject LOGO = new ImageWrapperObject(0, 0, 0, 0, 32, 32, 32, 32, ResourceLocation.fromNamespaceAndPath(References.ID, "textures/screen/guidebook/blastcraftlogo.png"));
 
 	@Override
 	public ImageWrapperObject getLogo() {

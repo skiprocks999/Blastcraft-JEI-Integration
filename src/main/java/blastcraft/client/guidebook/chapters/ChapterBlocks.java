@@ -18,7 +18,7 @@ import net.minecraft.network.chat.MutableComponent;
 
 public class ChapterBlocks extends Chapter {
 
-	private static final ItemWrapperObject LOGO = new ItemWrapperObject(7, 10, 32, 32, 32, 2.0F, BlastcraftBlocks.blockCamoflage.asItem());
+	private static final ItemWrapperObject LOGO = new ItemWrapperObject(7, 10, 32, 32, 32, 2.0F, BlastcraftItems.ITEM_CAMOFLAGE.get());
 
 	public ChapterBlocks(Module module) {
 		super(module);
@@ -38,13 +38,13 @@ public class ChapterBlocks extends Chapter {
 	public void addData() {
 
 		// Camoflage
-		pageData.add(new TextWrapperObject(BlastcraftBlocks.blockCamoflage.asItem().getDescription().copy().withStyle(ChatFormatting.BOLD)).setCentered().setSeparateStart());
-		pageData.add(new ItemWrapperObject(7 + ScreenGuidebook.TEXT_WIDTH / 2 - 16, 10, 32, 32, 32, 2.0F, BlastcraftBlocks.blockCamoflage.asItem()));
+		pageData.add(new TextWrapperObject(BlastcraftItems.ITEM_CAMOFLAGE.get().getDescription().copy().withStyle(ChatFormatting.BOLD)).setCentered().setSeparateStart());
+		pageData.add(new ItemWrapperObject(7 + ScreenGuidebook.TEXT_WIDTH / 2 - 16, 10, 32, 32, 32, 2.0F, BlastcraftItems.ITEM_CAMOFLAGE.get()));
 		pageData.add(new TextWrapperObject(BlastcraftTextUtils.guidebook("chapter.blocks.camoflage1")).setSeparateStart().setIndentions(1));
 
 		// Blast resistant walls
 		pageData.add(new TextWrapperObject(BlastcraftTextUtils.guidebook("chapter.blocks.blastprooftitle").withStyle(ChatFormatting.BOLD)).setCentered().setNewPage());
-		pageData.add(new ItemWrapperObject(7 + ScreenGuidebook.TEXT_WIDTH / 2 - 16, 10, 32, 32, 32, 2.0F, BlastcraftItems.getItem(SubtypeCarbonPlatedWall.base)));
+		pageData.add(new ItemWrapperObject(7 + ScreenGuidebook.TEXT_WIDTH / 2 - 16, 10, 32, 32, 32, 2.0F, BlastcraftItems.ITEMS_CARBONPLATEDWALL.getValue(SubtypeCarbonPlatedWall.base)));
 		pageData.add(new TextWrapperObject(BlastcraftTextUtils.guidebook("chapter.blocks.blastproof1")).setSeparateStart().setIndentions(1));
 		blankLine();
 		pageData.add(new TextWrapperObject(BlastcraftTextUtils.guidebook("chapter.blocks.hardened").withStyle(ChatFormatting.UNDERLINE)).setSeparateStart());

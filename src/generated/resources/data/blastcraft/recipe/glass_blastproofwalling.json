@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:glass_blocks"
+    },
+    {
+      "tag": "c:hardened_blocks/solid_blastproof_walls"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blastcraft:blastproofwallingglass"
+  }
+}

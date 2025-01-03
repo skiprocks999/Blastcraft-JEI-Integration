@@ -1,0 +1,24 @@
+{
+  "type": "electrodynamics:chemical_mixer_recipe",
+  "fluidinputs": [
+    {
+      "amount": 1000,
+      "tag": "minecraft:water"
+    }
+  ],
+  "group": "blastcraft",
+  "iteminputs": [
+    {
+      "count": 1,
+      "ingredient": {
+        "item": "blastcraft:concretemix"
+      }
+    }
+  ],
+  "output": {
+    "amount": 5000,
+    "id": "blastcraft:fluidconcrete"
+  },
+  "ticks": 200,
+  "usagepertick": 400.0
+}

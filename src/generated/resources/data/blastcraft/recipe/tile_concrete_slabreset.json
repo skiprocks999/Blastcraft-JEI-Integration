@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "blastcraft:concretetile_slab"
+    },
+    {
+      "item": "blastcraft:concretetile_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blastcraft:concretetile"
+  }
+}

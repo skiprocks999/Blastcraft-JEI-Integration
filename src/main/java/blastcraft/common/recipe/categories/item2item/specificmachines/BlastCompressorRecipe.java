@@ -12,14 +12,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 
+import java.util.List;
+
 public class BlastCompressorRecipe extends Item2ItemRecipe {
 
 	public static final String RECIPE_GROUP = "blast_compressor_recipe";
 	public static final String MOD_ID = References.ID;
-	public static final ResourceLocation RECIPE_ID = new ResourceLocation(MOD_ID, RECIPE_GROUP);
+	public static final ResourceLocation RECIPE_ID = ResourceLocation.fromNamespaceAndPath(MOD_ID, RECIPE_GROUP);
 
-	public BlastCompressorRecipe(ResourceLocation id, CountableIngredient[] inputs, ItemStack output, double experience, int ticks, double usagePerTick, ProbableItem[] itemBiproducts, ProbableFluid[] fluidBiproudcts, ProbableGas[] gasBiproducts) {
-		super(id, inputs, output, experience, ticks, usagePerTick, itemBiproducts, fluidBiproudcts, gasBiproducts);
+	public BlastCompressorRecipe(String group, List<CountableIngredient> inputs, ItemStack output, double experience, int ticks, double usagePerTick, List<ProbableItem> itemBiproducts, List<ProbableFluid> fluidBiproducts, List<ProbableGas> gasBiproducts) {
+		super(group, inputs, output, experience, ticks, usagePerTick, itemBiproducts, fluidBiproducts, gasBiproducts);
 	}
 
 	@Override

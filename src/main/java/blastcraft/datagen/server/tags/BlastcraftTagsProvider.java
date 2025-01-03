@@ -8,7 +8,7 @@ import blastcraft.datagen.server.tags.types.BlastcraftItemTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class BlastcraftTagsProvider {
 

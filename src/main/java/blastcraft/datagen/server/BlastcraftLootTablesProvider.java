@@ -9,52 +9,53 @@ import blastcraft.common.block.subtype.SubtypeConcrete;
 import blastcraft.common.block.subtype.SubtypeHardenedBricks;
 import blastcraft.common.block.subtype.SubtypeRawBlastproofWall;
 import blastcraft.common.block.subtype.SubtypeWallingGlass;
-import blastcraft.registers.BlastcraftBlockTypes;
+import blastcraft.registers.BlastcraftTiles;
 import blastcraft.registers.BlastcraftBlocks;
 import electrodynamics.datagen.server.ElectrodynamicsLootTablesProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.world.level.block.Block;
 
 public class BlastcraftLootTablesProvider extends ElectrodynamicsLootTablesProvider {
 
-	public BlastcraftLootTablesProvider() {
-		super(References.ID);
+	public BlastcraftLootTablesProvider(HolderLookup.Provider provider) {
+		super(References.ID, provider);
 	}
 
 	@Override
 	protected void generate() {
 
 		for (SubtypeBlastproofWall wall : SubtypeBlastproofWall.values()) {
-			addSimpleBlock(BlastcraftBlocks.getBlock(wall));
+			addSimpleBlock(BlastcraftBlocks.BLOCKS_BLASTPROOFWALL.getValue(wall));
 		}
 
 		for (SubtypeRawBlastproofWall wall : SubtypeRawBlastproofWall.values()) {
-			addSimpleBlock(BlastcraftBlocks.getBlock(wall));
+			addSimpleBlock(BlastcraftBlocks.BLOCKS_RAW_BLASTPROOFWALL.getValue(wall));
 		}
 
 		for (SubtypeCarbonPlatedWall wall : SubtypeCarbonPlatedWall.values()) {
-			addSimpleBlock(BlastcraftBlocks.getBlock(wall));
+			addSimpleBlock(BlastcraftBlocks.BLOCKS_CARBONPLATEDWALL.getValue(wall));
 		}
 
 		for (SubtypeHardenedBricks wall : SubtypeHardenedBricks.values()) {
-			addSimpleBlock(BlastcraftBlocks.getBlock(wall));
+			addSimpleBlock(BlastcraftBlocks.BLOCKS_HARDENEDBRICKS.getValue(wall));
 		}
 
 		for (SubtypeWallingGlass glass : SubtypeWallingGlass.values()) {
-			addSimpleBlock(BlastcraftBlocks.getBlock(glass));
+			addSimpleBlock(BlastcraftBlocks.BLOCKS_WALLINGGLASS.getValue(glass));
 		}
 
 		for (SubtypeConcrete concrete : SubtypeConcrete.values()) {
-			addSimpleBlock(BlastcraftBlocks.getBlock(concrete));
+			addSimpleBlock(BlastcraftBlocks.BLOCKS_CONCRETE.getValue(concrete));
 		}
 
-		addSimpleBlock(BlastcraftBlocks.blockGlassPressurePlate);
-		addSimpleBlock(BlastcraftBlocks.blockCamoflage);
+		addSimpleBlock(BlastcraftBlocks.BLOCK_GLASSPRESSUREPLATE);
+		addSimpleBlock(BlastcraftBlocks.BLOCK_CAMOFLAGE);
 
-		addSimpleBlock(BlastcraftBlocks.blockSpike);
-		addSimpleBlock(BlastcraftBlocks.blockSpikeFire);
-		addSimpleBlock(BlastcraftBlocks.blockSpikePoison);
+		addSimpleBlock(BlastcraftBlocks.BLOCK_SPIKE);
+		addSimpleBlock(BlastcraftBlocks.BLOCK_FIRESPIKE);
+		addSimpleBlock(BlastcraftBlocks.BLOCK_POISONSPIKE);
 
-		addMachineTable(BlastcraftBlocks.blockBlastCompressor, BlastcraftBlockTypes.TILE_BLASTCOMPRESSOR, true, false, false, true, false);
+		addMachineTable(BlastcraftBlocks.BLOCK_BLASTCOMPRESSOR.get(), BlastcraftTiles.TILE_BLASTCOMPRESSOR, true, false, false, true, false);
 
 	}
 

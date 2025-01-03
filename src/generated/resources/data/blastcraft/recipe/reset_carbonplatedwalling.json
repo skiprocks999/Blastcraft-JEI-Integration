@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:hardened_blocks/solid_carbon_plated_walls"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blastcraft:carbonplatedwallbase"
+  }
+}

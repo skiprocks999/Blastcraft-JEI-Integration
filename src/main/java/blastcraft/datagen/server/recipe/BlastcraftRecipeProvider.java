@@ -2,7 +2,7 @@ package blastcraft.datagen.server.recipe;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import blastcraft.datagen.server.recipe.custom.fluid2item.BlastcraftChemicalCrystallizerRecipes;
 import blastcraft.datagen.server.recipe.custom.fluiditem2fluid.BlastcraftChemicalMixerRecipes;
@@ -11,16 +11,20 @@ import blastcraft.datagen.server.recipe.vanilla.BlastcraftCraftingTableRecipes;
 import blastcraft.datagen.server.recipe.vanilla.BlastcraftSmeltingRecipes;
 import blastcraft.datagen.server.recipe.vanilla.BlastcraftStonecuttingRecipes;
 import electrodynamics.datagen.utils.recipe.AbstractRecipeGenerator;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 
 public class BlastcraftRecipeProvider extends RecipeProvider {
 
 	public final List<AbstractRecipeGenerator> GENERATORS = new ArrayList<>();
 
-	public BlastcraftRecipeProvider(PackOutput output) {
-		super(output);
+	private final CompletableFuture<HolderLookup.Provider> lookupProvider;
+
+	public BlastcraftRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+		super(output, lookupProvider);
+		this.lookupProvider = lookupProvider;
 		addRecipes();
 	}
 
@@ -34,9 +38,9 @@ public class BlastcraftRecipeProvider extends RecipeProvider {
 	}
 
 	@Override
-	protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+	protected void buildRecipes(RecipeOutput output) {
 		for (AbstractRecipeGenerator generator : GENERATORS) {
-			generator.addRecipes(consumer);
+			generator.addRecipes(output);
 		}
 	}
 
