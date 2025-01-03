@@ -11,6 +11,7 @@ import blastcraft.common.recipe.categories.item2item.specificmachines.BlastCompr
 import blastcraft.registers.BlastcraftBlocks;
 import blastcraft.registers.BlastcraftFluids;
 import blastcraft.registers.BlastcraftItems;
+import blastcraft.registers.BlastcraftSounds;
 import electrodynamics.datagen.client.ElectrodynamicsLangKeyProvider;
 import net.minecraft.data.PackOutput;
 
@@ -160,6 +161,8 @@ public class BlastcraftLangKeyProvider extends ElectrodynamicsLangKeyProvider {
                 addTooltip("concretemix", "What Minecraft is made of");
 
                 addGuidebook(References.ID, "Blastcraft");
+
+                addSubtitle(BlastcraftSounds.SOUND_BLASTCOMPRESSOR, "Blast Compressor Compresses");
 
                 addGuidebook("chapter.blocks", "Blocks");
                 addGuidebook("chapter.blocks.camoflage1", "Camoflage can be disguised as any block in the game by Right-Clicking on it with said block in hand. Note, it will only copy the appearance of the block, and none of its other properties! Camoflage will also allow daylight to pass through it.");
