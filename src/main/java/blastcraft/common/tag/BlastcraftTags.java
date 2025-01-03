@@ -19,6 +19,8 @@ public class BlastcraftTags {
 
 	public static class Items {
 
+		public static final TagKey<Item> DUST_POISON = forgeTag("dusts/poison");
+
 		public static final TagKey<Item> SOLID_HARDENED_BRICKS = forgeTag("hardened_blocks/solid_hardened_bricks");
 		public static final TagKey<Item> SOLID_RAW_BLASTPROOF_WALLS = forgeTag("hardened_blocks/solid_raw_blastproof_walls");
 		public static final TagKey<Item> SOLID_BLASTPROOF_WALLS = forgeTag("hardened_blocks/solid_blastproof_walls");

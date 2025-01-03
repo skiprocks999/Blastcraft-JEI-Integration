@@ -1,6 +1,5 @@
 package blastcraft.datagen.server.recipe.vanilla;
 
-import ballistix.common.tags.BallistixTags;
 import blastcraft.References;
 import blastcraft.common.block.subtype.SubtypeBlastproofWall;
 import blastcraft.common.block.subtype.SubtypeCarbonPlatedWall;
@@ -85,9 +84,9 @@ public class BlastcraftCraftingTableRecipes extends AbstractRecipeGenerator {
                 //
                 .addIngredient(BlastcraftItems.ITEM_SPIKE.get())
                 //
-                .addIngredient(BallistixTags.Items.DUST_POISON)
+                .addIngredient(BlastcraftTags.Items.DUST_POISON)
                 //
-                .addConditions(new ModLoadedCondition(ballistix.References.ID))
+                .addConditions(new ModLoadedCondition(References.BALLISTIX_ID))
                 //
                 .complete(References.ID, "spikes_poison_poisondust", output);
 
