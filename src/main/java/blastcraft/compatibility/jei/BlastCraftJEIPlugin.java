@@ -22,36 +22,36 @@ import net.minecraft.world.item.crafting.RecipeManager;
 @JeiPlugin
 public class BlastCraftJEIPlugin implements IModPlugin {
 
-	@Override
-	public ResourceLocation getPluginUid() {
-		return new ResourceLocation(blastcraft.References.ID, "jei");
-	}
+    @Override
+    public ResourceLocation getPluginUid() {
+        return ResourceLocation.fromNamespaceAndPath(blastcraft.References.ID, "jei");
+    }
 
-	@Override
-	public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
-		registration.addRecipeCatalyst(BlastCompressorRecipeCategory.INPUT_MACHINE, BlastCompressorRecipeCategory.RECIPE_TYPE);
-	}
+    @Override
+    public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
+        registration.addRecipeCatalyst(BlastCompressorRecipeCategory.INPUT_MACHINE, BlastCompressorRecipeCategory.RECIPE_TYPE);
+    }
 
-	@Override
-	public void registerRecipes(IRecipeRegistration registration) {
-		Minecraft mc = Minecraft.getInstance();
-		ClientLevel world = Objects.requireNonNull(mc.level);
-		RecipeManager recipeManager = world.getRecipeManager();
+    @Override
+    public void registerRecipes(IRecipeRegistration registration) {
+        Minecraft mc = Minecraft.getInstance();
+        ClientLevel world = Objects.requireNonNull(mc.level);
+        RecipeManager recipeManager = world.getRecipeManager();
 
-		// Blast Compressor
-		List<BlastCompressorRecipe> blastCompressorRecipes = recipeManager.getAllRecipesFor(BlastCraftRecipeInit.BLAST_COMPRESSOR_TYPE.get());
-		registration.addRecipes(BlastCompressorRecipeCategory.RECIPE_TYPE, blastCompressorRecipes);
+        // Blast Compressor
+        List<BlastCompressorRecipe> blastCompressorRecipes = recipeManager.getAllRecipesFor(BlastCraftRecipeInit.BLAST_COMPRESSOR_TYPE.get()).stream().map(val -> val.value()).toList();
+        registration.addRecipes(BlastCompressorRecipeCategory.RECIPE_TYPE, blastCompressorRecipes);
 
-	}
+    }
 
-	@Override
-	public void registerCategories(IRecipeCategoryRegistration registration) {
-		registration.addRecipeCategories(new BlastCompressorRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
-	}
+    @Override
+    public void registerCategories(IRecipeCategoryRegistration registration) {
+        registration.addRecipeCategories(new BlastCompressorRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+    }
 
-	@Override
-	public void registerGuiHandlers(IGuiHandlerRegistration registry) {
-		registry.addRecipeClickArea(ScreenO2OProcessor.class, 48, 35, 22, 15, ElectrodynamicsJEIPlugin.O2O_CLICK_AREAS.toArray(new mezz.jei.api.recipe.RecipeType[ElectrodynamicsJEIPlugin.O2O_CLICK_AREAS.size()]));
-	}
+    @Override
+    public void registerGuiHandlers(IGuiHandlerRegistration registry) {
+        registry.addRecipeClickArea(ScreenO2OProcessor.class, 48, 35, 22, 15, ElectrodynamicsJEIPlugin.O2O_CLICK_AREAS.toArray(new mezz.jei.api.recipe.RecipeType[ElectrodynamicsJEIPlugin.O2O_CLICK_AREAS.size()]));
+    }
 
 }

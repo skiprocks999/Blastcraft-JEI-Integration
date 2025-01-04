@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:hardened_blocks/smooth_solid_blastproof_walls"
+  },
+  "result": {
+    "count": 2,
+    "id": "blastcraft:blastproofwallpolished_slab"
+  }
+}

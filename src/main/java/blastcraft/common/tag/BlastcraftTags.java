@@ -1,6 +1,5 @@
 package blastcraft.common.tag;
 
-import blastcraft.common.fluid.types.FluidConcrete;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
@@ -20,6 +19,8 @@ public class BlastcraftTags {
 
 	public static class Items {
 
+		public static final TagKey<Item> DUST_POISON = forgeTag("dusts/poison");
+
 		public static final TagKey<Item> SOLID_HARDENED_BRICKS = forgeTag("hardened_blocks/solid_hardened_bricks");
 		public static final TagKey<Item> SOLID_RAW_BLASTPROOF_WALLS = forgeTag("hardened_blocks/solid_raw_blastproof_walls");
 		public static final TagKey<Item> SOLID_BLASTPROOF_WALLS = forgeTag("hardened_blocks/solid_blastproof_walls");
@@ -36,7 +37,7 @@ public class BlastcraftTags {
 		}
 
 		private static TagKey<Item> forgeTag(String name) {
-			return ItemTags.create(new ResourceLocation("forge", name));
+			return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
 		}
 
 	}
@@ -54,21 +55,21 @@ public class BlastcraftTags {
 		}
 
 		private static TagKey<Block> forgeTag(String name) {
-			return BlockTags.create(new ResourceLocation("forge", name));
+			return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
 		}
 
 	}
 
 	public static class Fluids {
 
-		public static final TagKey<Fluid> CONCRETE = forgeTag(FluidConcrete.FORGE_TAG);
+		public static final TagKey<Fluid> CONCRETE = forgeTag("concrete");
 
 		private static void init() {
 
 		}
 
 		private static TagKey<Fluid> forgeTag(String name) {
-			return FluidTags.create(new ResourceLocation("forge", name));
+			return FluidTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
 		}
 
 	}

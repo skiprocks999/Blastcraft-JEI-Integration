@@ -18,7 +18,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class BlockSpike extends Block {
 
 	public BlockSpike() {
-		super(Properties.copy(Blocks.IRON_BLOCK).strength(1F).sound(SoundType.METAL).noOcclusion());
+		super(Blocks.IRON_BLOCK.properties().strength(1F).sound(SoundType.METAL).noOcclusion());
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class BlockSpike extends Block {
 		@Override
 		public void stepOn(Level worldIn, BlockPos pos, BlockState state, Entity entityIn) {
 			if (entityIn instanceof LivingEntity) {
-				entityIn.setSecondsOnFire(10);
+				entityIn.setRemainingFireTicks(200);
 				entityIn.hurt(entityIn.damageSources().cactus(), 1f);
 			}
 		}

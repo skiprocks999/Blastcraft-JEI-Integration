@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "blastcraft:blastproofwallbase_slab"
+    },
+    {
+      "item": "blastcraft:blastproofwallbase_slab"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "blastcraft:blastproofwallbase"
+  }
+}

@@ -103,5 +103,6 @@
   "guidebook.blastcraft.chapter.blocks.strength": "Strength: %s",
   "item.blastcraft.concretemix": "Blastcrete",
   "jei.blast_compressor_recipe": "Blast Compressor",
+  "subtitles.blastcraft.blastcompressor": "Blast Compressor Compresses",
   "tooltip.blastcraft.concretemix": "What Minecraft is made of"
 }

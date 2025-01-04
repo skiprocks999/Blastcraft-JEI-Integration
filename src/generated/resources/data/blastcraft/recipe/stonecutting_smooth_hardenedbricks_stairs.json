@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:hardened_blocks/smooth_solid_hardened_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "blastcraft:hardenedbrickssmooth_stairs"
+  }
+}

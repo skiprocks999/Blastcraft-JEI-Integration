@@ -1,7 +1,5 @@
 package blastcraft.datagen.server.recipe.vanilla;
 
-import java.util.function.Consumer;
-
 import blastcraft.References;
 import blastcraft.common.block.subtype.SubtypeBlastproofWall;
 import blastcraft.common.block.subtype.SubtypeCarbonPlatedWall;
@@ -10,60 +8,61 @@ import blastcraft.common.block.subtype.SubtypeRawBlastproofWall;
 import blastcraft.registers.BlastcraftItems;
 import electrodynamics.datagen.utils.recipe.AbstractRecipeGenerator;
 import electrodynamics.datagen.utils.recipe.ElectrodynamicsCookingRecipe;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.resources.ResourceLocation;
 
 public class BlastcraftSmeltingRecipes extends AbstractRecipeGenerator {
 
 	@Override
-	public void addRecipes(Consumer<FinishedRecipe> consumer) {
+	public void addRecipes(RecipeOutput output) {
 
-		ElectrodynamicsCookingRecipe.smeltingRecipe(BlastcraftItems.getItem(SubtypeBlastproofWall.smooth), 0.1F, 200)
+		ElectrodynamicsCookingRecipe.smeltingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_blastproofwalling_smelting"), References.ID, BlastcraftItems.ITEMS_BLASTPROOFWALL.getValue(SubtypeBlastproofWall.smooth), 0.1F, 200)
 				//
-				.input(BlastcraftItems.getItem(SubtypeBlastproofWall.base))
+				.input(BlastcraftItems.ITEMS_BLASTPROOFWALL.getValue(SubtypeBlastproofWall.base))
 				//
-				.complete(References.ID, "smooth_blastproofwalling_smelting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.blastingRecipe(BlastcraftItems.getItem(SubtypeBlastproofWall.smooth), 0.1F, 100)
+		ElectrodynamicsCookingRecipe.blastingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_blastproofwalling_blasting"), References.ID, BlastcraftItems.ITEMS_BLASTPROOFWALL.getValue(SubtypeBlastproofWall.smooth), 0.1F, 100)
 				//
-				.input(BlastcraftItems.getItem(SubtypeBlastproofWall.base))
+				.input(BlastcraftItems.ITEMS_BLASTPROOFWALL.getValue(SubtypeBlastproofWall.base))
 				//
-				.complete(References.ID, "smooth_blastproofwalling_blasting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.smeltingRecipe(BlastcraftItems.getItem(SubtypeRawBlastproofWall.smooth), 0.1F, 200)
+		ElectrodynamicsCookingRecipe.smeltingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_rawblastproofwalling_smelting"), References.ID, BlastcraftItems.ITEMS_RAW_BLASTPROOFWALL.getValue(SubtypeRawBlastproofWall.smooth), 0.1F, 200)
 				//
-				.input(BlastcraftItems.getItem(SubtypeRawBlastproofWall.base))
+				.input(BlastcraftItems.ITEMS_RAW_BLASTPROOFWALL.getValue(SubtypeRawBlastproofWall.base))
 				//
-				.complete(References.ID, "smooth_rawblastproofwalling_smelting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.blastingRecipe(BlastcraftItems.getItem(SubtypeRawBlastproofWall.smooth), 0.1F, 100)
+		ElectrodynamicsCookingRecipe.blastingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_rawblastproofwalling_blasting"), References.ID, BlastcraftItems.ITEMS_RAW_BLASTPROOFWALL.getValue(SubtypeRawBlastproofWall.smooth), 0.1F, 100)
 				//
-				.input(BlastcraftItems.getItem(SubtypeRawBlastproofWall.base))
+				.input(BlastcraftItems.ITEMS_RAW_BLASTPROOFWALL.getValue(SubtypeRawBlastproofWall.base))
 				//
-				.complete(References.ID, "smooth_rawblastproofwalling_blasting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.smeltingRecipe(BlastcraftItems.getItem(SubtypeCarbonPlatedWall.smooth), 0.1F, 200)
+		ElectrodynamicsCookingRecipe.smeltingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_carbonplatedwalling_smelting"), References.ID, BlastcraftItems.ITEMS_CARBONPLATEDWALL.getValue(SubtypeCarbonPlatedWall.smooth), 0.1F, 200)
 				//
-				.input(BlastcraftItems.getItem(SubtypeCarbonPlatedWall.base))
+				.input(BlastcraftItems.ITEMS_CARBONPLATEDWALL.getValue(SubtypeCarbonPlatedWall.base))
 				//
-				.complete(References.ID, "smooth_carbonplatedwalling_smelting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.blastingRecipe(BlastcraftItems.getItem(SubtypeCarbonPlatedWall.smooth), 0.1F, 100)
+		ElectrodynamicsCookingRecipe.blastingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_carbonplatedwalling_blasting"), References.ID, BlastcraftItems.ITEMS_CARBONPLATEDWALL.getValue(SubtypeCarbonPlatedWall.smooth), 0.1F, 100)
 				//
-				.input(BlastcraftItems.getItem(SubtypeCarbonPlatedWall.base))
+				.input(BlastcraftItems.ITEMS_CARBONPLATEDWALL.getValue(SubtypeCarbonPlatedWall.base))
 				//
-				.complete(References.ID, "smooth_carbonplatedwalling_blasting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.smeltingRecipe(BlastcraftItems.getItem(SubtypeHardenedBricks.smooth), 0.1F, 200)
+		ElectrodynamicsCookingRecipe.smeltingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_hardenedbricks_smelting"), References.ID, BlastcraftItems.ITEMS_HARDENEDBRICKS.getValue(SubtypeHardenedBricks.smooth), 0.1F, 200)
 				//
-				.input(BlastcraftItems.getItem(SubtypeHardenedBricks.base))
+				.input(BlastcraftItems.ITEMS_HARDENEDBRICKS.getValue(SubtypeHardenedBricks.base))
 				//
-				.complete(References.ID, "smooth_hardenedbricks_smelting", consumer);
+				.save(output);
 
-		ElectrodynamicsCookingRecipe.blastingRecipe(BlastcraftItems.getItem(SubtypeHardenedBricks.smooth), 0.1F, 100)
+		ElectrodynamicsCookingRecipe.blastingRecipe(ResourceLocation.fromNamespaceAndPath(References.ID, "smooth_hardenedbricks_blasting"), References.ID, BlastcraftItems.ITEMS_HARDENEDBRICKS.getValue(SubtypeHardenedBricks.smooth), 0.1F, 100)
 				//
-				.input(BlastcraftItems.getItem(SubtypeHardenedBricks.base))
+				.input(BlastcraftItems.ITEMS_HARDENEDBRICKS.getValue(SubtypeHardenedBricks.base))
 				//
-				.complete(References.ID, "smooth_hardenedbricks_blasting", consumer);
+				.save(output);
 
 	}
 
