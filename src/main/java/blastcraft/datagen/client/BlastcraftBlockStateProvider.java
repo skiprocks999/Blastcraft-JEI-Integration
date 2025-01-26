@@ -8,6 +8,7 @@ import blastcraft.common.block.subtype.SubtypeHardenedBricks;
 import blastcraft.common.block.subtype.SubtypeRawBlastproofWall;
 import blastcraft.common.block.subtype.SubtypeWallingGlass;
 import blastcraft.registers.BlastcraftBlocks;
+import electrodynamics.Electrodynamics;
 import electrodynamics.datagen.client.ElectrodynamicsBlockStateProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -125,13 +126,13 @@ public class BlastcraftBlockStateProvider extends ElectrodynamicsBlockStateProvi
 
 		}
 
-		simpleBlockCustomRenderType(BlastcraftBlocks.BLOCK_CAMOFLAGE, blockLoc(name(BlastcraftBlocks.BLOCK_CAMOFLAGE.get())), ResourceLocation.parse("cutout"), true);
+		simpleBlockCustomRenderType(BlastcraftBlocks.BLOCK_CAMOFLAGE, blockLoc(name(BlastcraftBlocks.BLOCK_CAMOFLAGE.get())), Electrodynamics.vanillarl("cutout"), true);
 
-		pressurePlateBlock(BlastcraftBlocks.BLOCK_GLASSPRESSUREPLATE.get(), blockLoc("trans"), ResourceLocation.parse("cutout"), true);
+		pressurePlateBlock(BlastcraftBlocks.BLOCK_GLASSPRESSUREPLATE.get(), blockLoc("trans"), Electrodynamics.vanillarl("cutout"), true);
 
-		crossBlock(BlastcraftBlocks.BLOCK_SPIKE, blockLoc("spike/" + name(BlastcraftBlocks.BLOCK_SPIKE.get())), ResourceLocation.parse("cutout"), true);
-		crossBlock(BlastcraftBlocks.BLOCK_FIRESPIKE, blockLoc("spike/" + name(BlastcraftBlocks.BLOCK_FIRESPIKE.get())), ResourceLocation.parse("cutout"), true);
-		crossBlock(BlastcraftBlocks.BLOCK_POISONSPIKE, blockLoc("spike/" + name(BlastcraftBlocks.BLOCK_POISONSPIKE.get())), ResourceLocation.parse("cutout"), true);
+		crossBlock(BlastcraftBlocks.BLOCK_SPIKE, blockLoc("spike/" + name(BlastcraftBlocks.BLOCK_SPIKE.get())), Electrodynamics.vanillarl("cutout"), true);
+		crossBlock(BlastcraftBlocks.BLOCK_FIRESPIKE, blockLoc("spike/" + name(BlastcraftBlocks.BLOCK_FIRESPIKE.get())), Electrodynamics.vanillarl("cutout"), true);
+		crossBlock(BlastcraftBlocks.BLOCK_POISONSPIKE, blockLoc("spike/" + name(BlastcraftBlocks.BLOCK_POISONSPIKE.get())), Electrodynamics.vanillarl("cutout"), true);
 
 		horrRotatedBlock(BlastcraftBlocks.BLOCK_BLASTCOMPRESSOR, existingBlock(BlastcraftBlocks.BLOCK_BLASTCOMPRESSOR), true);
 

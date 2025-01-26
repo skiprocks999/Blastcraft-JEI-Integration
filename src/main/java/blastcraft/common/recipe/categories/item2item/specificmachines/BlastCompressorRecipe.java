@@ -1,6 +1,6 @@
 package blastcraft.common.recipe.categories.item2item.specificmachines;
 
-import blastcraft.References;
+import blastcraft.Blastcraft;
 import blastcraft.common.recipe.BlastCraftRecipeInit;
 import electrodynamics.common.recipe.categories.item2item.Item2ItemRecipe;
 import electrodynamics.common.recipe.recipeutils.CountableIngredient;
@@ -17,8 +17,7 @@ import java.util.List;
 public class BlastCompressorRecipe extends Item2ItemRecipe {
 
 	public static final String RECIPE_GROUP = "blast_compressor_recipe";
-	public static final String MOD_ID = References.ID;
-	public static final ResourceLocation RECIPE_ID = ResourceLocation.fromNamespaceAndPath(MOD_ID, RECIPE_GROUP);
+	public static final ResourceLocation RECIPE_ID = Blastcraft.rl(RECIPE_GROUP);
 
 	public BlastCompressorRecipe(String group, List<CountableIngredient> inputs, ItemStack output, double experience, int ticks, double usagePerTick, List<ProbableItem> itemBiproducts, List<ProbableFluid> fluidBiproducts, List<ProbableGas> gasBiproducts) {
 		super(group, inputs, output, experience, ticks, usagePerTick, itemBiproducts, fluidBiproducts, gasBiproducts);

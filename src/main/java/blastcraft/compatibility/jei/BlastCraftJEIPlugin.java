@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import blastcraft.Blastcraft;
 import blastcraft.common.recipe.BlastCraftRecipeInit;
 import blastcraft.common.recipe.categories.item2item.specificmachines.BlastCompressorRecipe;
 import blastcraft.compatibility.jei.recipecategories.item2item.specificmachines.BlastCompressorRecipeCategory;
@@ -25,9 +26,10 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 @JeiPlugin
 public class BlastCraftJEIPlugin implements IModPlugin {
 
+    public static final ResourceLocation ID = Blastcraft.rl("jei");
     @Override
     public ResourceLocation getPluginUid() {
-        return ResourceLocation.fromNamespaceAndPath(blastcraft.References.ID, "jei");
+        return ID;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package blastcraft.common.tag;
 
-import net.minecraft.resources.ResourceLocation;
+import electrodynamics.Electrodynamics;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
@@ -37,7 +37,7 @@ public class BlastcraftTags {
 		}
 
 		private static TagKey<Item> forgeTag(String name) {
-			return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
+			return ItemTags.create(Electrodynamics.commonrl(name));
 		}
 
 	}
@@ -55,7 +55,7 @@ public class BlastcraftTags {
 		}
 
 		private static TagKey<Block> forgeTag(String name) {
-			return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
+			return BlockTags.create(Electrodynamics.commonrl(name));
 		}
 
 	}
@@ -69,7 +69,7 @@ public class BlastcraftTags {
 		}
 
 		private static TagKey<Fluid> forgeTag(String name) {
-			return FluidTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
+			return FluidTags.create(Electrodynamics.commonrl(name));
 		}
 
 	}
