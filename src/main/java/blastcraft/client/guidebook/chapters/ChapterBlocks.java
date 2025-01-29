@@ -6,7 +6,6 @@ import blastcraft.common.block.subtype.SubtypeConcrete;
 import blastcraft.common.block.subtype.SubtypeHardenedBricks;
 import blastcraft.common.block.subtype.SubtypeRawBlastproofWall;
 import blastcraft.prefab.utils.BlastcraftTextUtils;
-import blastcraft.registers.BlastcraftBlocks;
 import blastcraft.registers.BlastcraftItems;
 import electrodynamics.client.guidebook.ScreenGuidebook;
 import electrodynamics.client.guidebook.utils.components.Chapter;

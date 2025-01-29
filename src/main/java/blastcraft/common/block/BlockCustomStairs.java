@@ -1,7 +1,5 @@
 package blastcraft.common.block;
 
-import java.util.function.Supplier;
-
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
