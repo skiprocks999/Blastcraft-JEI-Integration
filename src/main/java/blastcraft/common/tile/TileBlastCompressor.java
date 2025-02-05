@@ -1,8 +1,8 @@
 package blastcraft.common.tile;
 
 import blastcraft.common.recipe.BlastCraftRecipeInit;
-import blastcraft.registers.BlastcraftTiles;
 import blastcraft.registers.BlastcraftSounds;
+import blastcraft.registers.BlastcraftTiles;
 import electrodynamics.common.inventory.container.tile.ContainerO2OProcessor;
 import electrodynamics.prefab.sound.SoundBarrierMethods;
 import electrodynamics.prefab.sound.utils.ITickableSound;

@@ -1,5 +1,7 @@
 package blastcraft.common.recipe.categories.item2item.specificmachines;
 
+import java.util.List;
+
 import blastcraft.Blastcraft;
 import blastcraft.common.recipe.BlastCraftRecipeInit;
 import electrodynamics.common.recipe.categories.item2item.Item2ItemRecipe;
@@ -11,8 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-
-import java.util.List;
 
 public class BlastCompressorRecipe extends Item2ItemRecipe {
 
